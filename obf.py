@@ -142,7 +142,7 @@ if __name__ == "__main__":
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(output)
     
-    print(f"[✓] Obfuscated: {out_path}")
+    print(f"\x1b[0;92m[✓] Obfuscated: {out_path}\x1b[1;97m ")
     print(f"[+] Output: {len(output)} bytes")
     print(f"[+] Compression: {(1 - len(output) / len(original)) * 100:.1f}%")
     print(f"[+] XOR Key 1: {key1}")
@@ -175,7 +175,7 @@ def main():
     if confirm == 'y':
         obfuscate_script(script)
         print("\n[✓] SELESAI!")
-        print(f"[!] Jalankan: python {script}_obfuscated.py").strip()
+        
 
 if __name__ == "__main__":
     main()
